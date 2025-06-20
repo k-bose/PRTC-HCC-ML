@@ -1,22 +1,19 @@
 # PRTC-HCC-ML
 Reproducing MLs models from the Research Paper "Predicting Response to Transarterial Chemoembolization in Hepatocellualar Carcinoma Using Machine Learning Models"
 
-# Environment
-1. Create and activate Python Virtual Environment
-    ```bash
-    $ python3.11 -m venv .venv
-    $ source .venv/bin/activate
-    ```
-2. Install supporting packages
-    ```bash
-    $ pip install "numpy<2.0"
-    $ pip install versioneer
-    ```
-3. Install PyRadiomics
-    ```bash
-    $ pip install pyradiomics --no-build-isolation
-    ```
-4. Install rest of the packages
-    ```bash
-    $ pip install -r requirements.txt
-    ```
+# Dataset
+- 1218 feature columns + 1 taget column
+- 75 feature vectors
+- 90-10 dataset split
+    - 67 train Cases
+    - 8 test Cases
+- Default hyper-parameters for model training
+
+# Results
+|| RF | SVM | LR | GB | XGB |
+|---|---|---|---|---|---|
+|Accuracy| 0.6250 | 0.6250 | 0.3750 | 0.5000 | 0.3750 |
+|F1 Score| 0.7273 | 0.7692 | 0.2857 | 0.3333 | 0.2857 |
+|AUC Score| 0.6000 | 0.4667 | 0.4667 | 0.3333 | 0.4000 |
+|Senstivity| 0.8000 | 1.0000 | 0.2000 | 0.2000 | 0.2000 |
+|Specificity| 0.3333 | 0.0000 | 0.6667 | 1.0000 | 0.6667 |

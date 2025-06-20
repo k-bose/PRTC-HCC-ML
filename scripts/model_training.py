@@ -68,7 +68,7 @@ def load_ds(ds):
 def get_config():
     """Returns a dictionary of configuration parameters."""
     return {
-        'DATASET': 'out/radiomics_ct_features_cleaned.csv',
+        'DATASET': 'data/radiomics_ct_features_cleaned.csv',
         'RANDOM_STATE': 42
     }
 
